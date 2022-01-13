@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/edit_text_shape"
             android:fontFamily="@font/roboto_medium"
-            android:hint="Title"
+            android:hint="Title..."
             android:maxLines="1"
             android:padding="15dp"
 
@@ -96,6 +96,7 @@
         android:layout_gravity="bottom|right"
         android:layout_margin="12dp"
         android:backgroundTint="#FD1D1D"
+        app:borderWidth="0dp"
         android:clickable="true"
         android:src="@drawable/ic_baseline_done_24"
         app:tint="@color/white" />
