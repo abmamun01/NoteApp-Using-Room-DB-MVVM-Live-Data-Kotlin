@@ -12,6 +12,11 @@ class NotesRepository(val dao: NotesDao) {
     }
 
 
+    fun getLowNotes():LiveData<List<Notes_Entity>> = dao.getLowNotes()
+    fun getMediumNotes():LiveData<List<Notes_Entity>> = dao.getMediumNotes()
+    fun getHighNotes():LiveData<List<Notes_Entity>> = dao.getHighNotes()
+
+
     fun insertNotes(notes: Notes_Entity) {
         dao.insertNotes(notes)
     }

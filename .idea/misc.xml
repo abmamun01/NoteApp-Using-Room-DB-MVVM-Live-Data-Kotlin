@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Studio Projectss/NoteTakingAppKotlin/app/src/main/res/drawable/btn_filter_shape.xml" value="0.16574074074074074" />
+        <entry key="..\:/Android Studio Projectss/NoteTakingAppKotlin/app/src/main/res/drawable/delete_sheet.xml" value="0.14907407407407408" />
         <entry key="..\:/Android Studio Projectss/NoteTakingAppKotlin/app/src/main/res/drawable/edit_text_shape.xml" value="0.1" />
         <entry key="..\:/Android Studio Projectss/NoteTakingAppKotlin/app/src/main/res/drawable/green_dot.xml" value="0.1" />
         <entry key="..\:/Android Studio Projectss/NoteTakingAppKotlin/app/src/main/res/drawable/ic_baseline_done_24.xml" value="0.318859649122807" />
+        <entry key="..\:/Android Studio Projectss/NoteTakingAppKotlin/app/src/main/res/drawable/ic_baseline_filter_list_24.xml" value="0.14907407407407408" />
         <entry key="..\:/Android Studio Projectss/NoteTakingAppKotlin/app/src/main/res/drawable/no_btn.xml" value="0.1" />
         <entry key="..\:/Android Studio Projectss/NoteTakingAppKotlin/app/src/main/res/drawable/red_dot.xml" value="0.1" />
         <entry key="..\:/Android Studio Projectss/NoteTakingAppKotlin/app/src/main/res/drawable/yello_dot.xml" value="0.1" />
@@ -16,8 +19,10 @@
         <entry key="..\:/Android Studio Projectss/NoteTakingAppKotlin/app/src/main/res/layout/dialuoge_delte.xml" value="0.1" />
         <entry key="..\:/Android Studio Projectss/NoteTakingAppKotlin/app/src/main/res/layout/fragment_create_note.xml" value="0.25" />
         <entry key="..\:/Android Studio Projectss/NoteTakingAppKotlin/app/src/main/res/layout/fragment_edit_notes.xml" value="0.2" />
-        <entry key="..\:/Android Studio Projectss/NoteTakingAppKotlin/app/src/main/res/layout/fragment_home.xml" value="0.15" />
+        <entry key="..\:/Android Studio Projectss/NoteTakingAppKotlin/app/src/main/res/layout/fragment_home.xml" value="0.13" />
         <entry key="..\:/Android Studio Projectss/NoteTakingAppKotlin/app/src/main/res/layout/item_notes.xml" value="0.15" />
+        <entry key="..\:/Android Studio Projectss/NoteTakingAppKotlin/app/src/main/res/menu/delete_menu.xml" value="0.1" />
+        <entry key="..\:/Android Studio Projectss/NoteTakingAppKotlin/app/src/main/res/menu/search_menu.xml" value="0.1" />
       </map>
     </option>
   </component>

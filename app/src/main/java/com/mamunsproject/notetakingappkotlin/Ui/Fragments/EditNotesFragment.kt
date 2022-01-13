@@ -2,14 +2,14 @@ package com.mamunsproject.notetakingappkotlin.Ui.Fragments
 
 import android.os.Bundle
 import android.text.format.DateFormat
+import android.view.*
+import android.widget.TextView
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.mamunsproject.notetakingappkotlin.Model.Notes_Entity
 import com.mamunsproject.notetakingappkotlin.R
 import com.mamunsproject.notetakingappkotlin.ViewModel.NotesViewModel
@@ -32,7 +32,7 @@ class EditNotesFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentEditNotesBinding.inflate(inflater, container, false)
-
+        setHasOptionsMenu(true)
 
 
         binding.editTitle.setText(oldNotes.customParse.title)
@@ -126,4 +126,42 @@ class EditNotesFragment : Fragment() {
 
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.delete_menu, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        if (item.itemId == R.id.menu_delete) {
+
+            val bottomSheet: BottomSheetDialog =
+                BottomSheetDialog(requireContext(), R.style.BottomSheetStyle)
+            bottomSheet.setContentView(R.layout.dialuoge_delete)
+
+
+            val textYes = bottomSheet.findViewById<TextView>(R.id.dialogue_yes)
+            val textNo = bottomSheet.findViewById<TextView>(R.id.dialogue_no)
+
+            textYes?.setOnClickListener {
+
+                viewModel.deleteNotes(oldNotes.customParse.id!!)
+                //Going home fragment after added note
+             //   Navigation.findNavController(it!!).navigate(R.id.action_editNotesFragment_to_homeFragment)
+                bottomSheet.dismiss()
+
+            }
+            textNo?.setOnClickListener {
+
+                bottomSheet.dismiss()
+            }
+
+
+            bottomSheet.show()
+
+
+        }
+        return super.onOptionsItemSelected(item)
+    }
 }

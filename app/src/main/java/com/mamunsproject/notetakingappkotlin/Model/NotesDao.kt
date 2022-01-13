@@ -11,6 +11,27 @@ interface NotesDao {
     @Query("SELECT * FROM NOTES_TABLE")
     fun getNotes(): LiveData<List<Notes_Entity>>
 
+
+
+
+
+    @Query("SELECT * FROM NOTES_TABLE WHERE priority=3")
+    fun getHighNotes(): LiveData<List<Notes_Entity>>
+
+
+
+    @Query("SELECT * FROM NOTES_TABLE WHERE priority=2")
+    fun getMediumNotes(): LiveData<List<Notes_Entity>>
+
+
+
+    @Query("SELECT * FROM NOTES_TABLE WHERE priority=1")
+    fun getLowNotes(): LiveData<List<Notes_Entity>>
+
+
+
+
+
     // onConflict mane jodi same query pai tahole ata replace kore dibo
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertNotes(notes: Notes_Entity)

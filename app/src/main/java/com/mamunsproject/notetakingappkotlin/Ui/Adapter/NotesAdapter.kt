@@ -10,9 +10,16 @@ import com.mamunsproject.notetakingappkotlin.R
 import com.mamunsproject.notetakingappkotlin.Ui.Fragments.HomeFragmentDirections
 import com.mamunsproject.notetakingappkotlin.databinding.ItemNotesBinding
 
-class NotesAdapter(val requireContext: Context, val notesList: List<Notes_Entity>) :
+class NotesAdapter(val requireContext: Context, var notesList: List<Notes_Entity>) :
     RecyclerView.Adapter<NotesAdapter.notesViewHolder>() {
 
+
+    fun filtering(newFilteredList: ArrayList<Notes_Entity>) {
+
+        notesList = newFilteredList
+        notifyDataSetChanged()
+
+    }
 
     class notesViewHolder(val binding: ItemNotesBinding) : RecyclerView.ViewHolder(binding.root) {
 

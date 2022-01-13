@@ -2,6 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
     android:orientation="vertical">
 
     <View
@@ -21,6 +23,8 @@
         android:textSize="18sp" />
 
     <TextView
+        android:id="@+id/dialogue_no"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -31,9 +35,11 @@
         android:text="No" />
 
     <TextView
+        android:id="@+id/dialogue_yes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/yes_btn"
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
